@@ -1,0 +1,7 @@
+@import '@vscode/codicons/dist/codicon.css';
+@import './tokens.css';
+@import './base.css';
+@import './titlebar.css';
+@import './sidebar.css';
+@import './workspace.css';
+@import './content.css';

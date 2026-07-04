@@ -1,0 +1,75 @@
+/* ADR-0003: 프레임리스 커스텀 타이틀바. mac은 네이티브 트래픽라이트가 이 행 위에 겹쳐 그려진다. */
+#titlebar.titlebar {
+  display: flex;
+  align-items: center;
+  height: var(--wd-titlebar-height);
+  flex-shrink: 0;
+  background: var(--wd-bg-tertiary);
+  border-bottom: 1px solid var(--wd-border);
+  -webkit-app-region: drag;
+  user-select: none;
+}
+
+.titlebar-drag-region {
+  flex: 1;
+  height: 100%;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titlebar-search-input {
+  -webkit-app-region: no-drag;
+  width: 100%;
+  max-width: 420px;
+  height: 22px;
+  padding: 0 var(--wd-space-2);
+  border: 1px solid var(--wd-border);
+  border-radius: var(--wd-radius);
+  background: var(--wd-bg-primary);
+  color: var(--wd-text-primary);
+  font-size: var(--wd-font-size);
+  font-family: var(--wd-font-family);
+  text-align: center;
+}
+
+.titlebar-search-input::placeholder {
+  color: var(--wd-text-secondary);
+}
+
+.titlebar-search-input:focus {
+  outline: none;
+  border-color: var(--wd-accent);
+}
+
+.titlebar.titlebar-inactive .titlebar-search-input,
+.titlebar.titlebar-inactive .titlebar-controls,
+.titlebar.titlebar-inactive .titlebar-actions {
+  opacity: 0.5;
+}
+
+.titlebar-actions,
+.titlebar-controls {
+  display: flex;
+  height: 100%;
+  -webkit-app-region: no-drag;
+}
+
+.titlebar-button {
+  width: 46px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--wd-text-secondary);
+}
+
+.titlebar-button:hover {
+  background: var(--wd-bg-hover);
+}
+
+.titlebar-button-close:hover {
+  background: var(--wd-error);
+  color: #ffffff;
+}

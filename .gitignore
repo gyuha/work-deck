@@ -3,3 +3,7 @@
 !.forge/CONTEXT.md
 !.forge/adr/
 !.forge/retro/
+!.forge/config.json
+
+node_modules/
+dist/

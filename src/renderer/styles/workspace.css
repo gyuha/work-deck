@@ -1,0 +1,87 @@
+[data-role='workspace'] {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--wd-bg-primary);
+}
+
+.workspace-pane {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  border-right: 1px solid var(--wd-border);
+}
+
+.workspace-pane:last-child {
+  border-right: none;
+}
+
+.tab-bar {
+  display: flex;
+  flex-shrink: 0;
+  height: 35px;
+  background: var(--wd-bg-tertiary);
+  border-bottom: 1px solid var(--wd-border);
+  overflow-x: auto;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: var(--wd-space-1);
+  padding: 0 var(--wd-space-2);
+  height: 100%;
+  border-right: 1px solid var(--wd-border);
+  color: var(--wd-text-secondary);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.tab.active {
+  color: var(--wd-text-primary);
+  background: var(--wd-bg-primary);
+  box-shadow: inset 0 -1px 0 var(--wd-accent);
+}
+
+.tab-icon {
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.tab-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tab-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: var(--wd-radius);
+  visibility: hidden;
+  flex-shrink: 0;
+}
+
+.tab:hover .tab-close,
+.tab.active .tab-close {
+  visibility: visible;
+}
+
+.tab-close:hover {
+  background: var(--wd-bg-hover);
+}
+
+.workspace-split-handle {
+  width: 4px;
+  flex-shrink: 0;
+  cursor: col-resize;
+  background: transparent;
+}
+
+.workspace-split-handle:hover {
+  background: var(--wd-accent);
+}

@@ -1,0 +1,38 @@
+{
+  "name": "workdeck",
+  "version": "0.1.0",
+  "description": "WorkDeck - 필요한 작업 도구를 한곳에 올려두는 작업용 데크",
+  "private": true,
+  "main": "dist/main/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "typecheck": "tsc -p tsconfig.node.json --noEmit && tsc -p tsconfig.web.json --noEmit",
+    "test": "vitest run",
+    "lint": "eslint src",
+    "start": "npm run build && electron .",
+    "postinstall": "node scripts/fix-node-pty-permissions.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/ssh2": "^1.15.5",
+    "electron": "^43.0.0",
+    "esbuild": "^0.28.1",
+    "eslint": "^9.15.0",
+    "ftp-srv": "^4.6.3",
+    "jsdom": "^29.1.1",
+    "typescript": "^5.7.0",
+    "typescript-eslint": "^8.15.0",
+    "vitest": "^4.1.9"
+  },
+  "dependencies": {
+    "@vscode/codicons": "^0.0.45",
+    "@xterm/xterm": "^6.0.0",
+    "basic-ftp": "^6.0.1",
+    "dompurify": "^3.4.11",
+    "highlight.js": "^11.11.1",
+    "marked": "^18.0.5",
+    "node-pty": "^1.1.0",
+    "ssh2": "^1.17.0"
+  }
+}

@@ -1,0 +1,49 @@
+/* docs/02-ui-layout.md 6장: VSCode 패턴 차용, 절제된 팔레트, 상태 색상만 강조.
+   기본값은 라이트, 다크는 prefers-color-scheme로만 전환한다(수동 토글 없음). */
+:root {
+  --wd-bg-primary: #ffffff; /* 워크스페이스/콘텐츠 배경 */
+  --wd-bg-secondary: #f3f3f3; /* 사이드바 배경 */
+  --wd-bg-tertiary: #ececec; /* 활동바·탭 바 배경 */
+  --wd-bg-hover: #e8e8e8;
+  --wd-bg-active: #d6ebff;
+  --wd-border: #e0e0e0;
+  --wd-text-primary: #1e1e1e;
+  --wd-text-secondary: #6e6e6e;
+  --wd-accent: #0066cc;
+  --wd-error: #cc3333;
+  --wd-warning: #b58900;
+  --wd-syntax-string: #1a7f37;
+
+  --wd-font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --wd-font-family-mono: Menlo, Consolas, 'SF Mono', monospace;
+  --wd-font-size: 13px;
+  --wd-row-height: 22px;
+  --wd-space-1: 4px;
+  --wd-space-2: 8px;
+  --wd-space-3: 12px;
+  --wd-radius: 2px;
+
+  --wd-titlebar-height: 32px;
+  --wd-activitybar-width: 48px;
+  --wd-sidebar-width-default: 240px;
+  --wd-sidebar-width-min: 170px;
+  --wd-sidebar-width-max: 500px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --wd-bg-primary: #1e1e1e;
+    --wd-bg-secondary: #252526;
+    --wd-bg-tertiary: #333333;
+    --wd-bg-hover: #2a2d2e;
+    --wd-bg-active: #094771;
+    --wd-border: #3c3c3c;
+    --wd-text-primary: #cccccc;
+    --wd-text-secondary: #969696;
+    --wd-accent: #3794ff;
+    --wd-error: #f14c4c;
+    --wd-warning: #cca700;
+    --wd-syntax-string: #6a9955;
+  }
+}
